@@ -6,6 +6,16 @@ TITLE="System Information Report For $HOSTNAME"
 CURRENT_TIME="$(date +"%x %r %Z")"
 TIMESTAMP="Generated $CURRENT_TIME, by $USER"
 
+report_uptime () { 
+	return 
+}
+report_disk_space () { 
+	return 
+} 
+report_home_space () { 
+	return 
+} 
+
 echo "<html>
 	<head>
 		<title>$TITLE</title>
@@ -13,5 +23,8 @@ echo "<html>
 	<body>
 		<h1>$TITLE</h1>
 		<p>$TIMESTAMP</p>
+		$(report_uptime) 
+		$(report_disk_space) 
+		$(report_home_space) 	
 	</body>
      </html>"
